@@ -86,7 +86,7 @@
 					<section data-background="assets/GUEsandstrand.jpg"></section>
 
 					<section>
-							<img height="560" src="assets/guernseyBus.jpg">
+							<img height="560" data-src="assets/guernseyBus.jpg">
 							<p><small>Quelle: <a href="http://www.guernseybuses.org/routes_and_times/journey_planner"><code>guernseybuses.org</code></small></a></p>
 					</section>
 				</section>
@@ -94,7 +94,7 @@
 				<section>
 						<!-- Infos über den Platz -->
 						<section>
-								<img height="560" src="http://www.lesmaingys.co.uk/wp-content/uploads/2015/07/LMAC-Map.jpg">
+								<img height="560" data-src="http://www.lesmaingys.co.uk/wp-content/uploads/2015/07/LMAC-Map.jpg">
 								<p><small>Quelle: <a href="http://www.lesmaingys.co.uk/about-us/"><code>Les Maingys Activity Centre</code></small></a></p>
 						</section>
 
@@ -282,7 +282,15 @@
 					{ src: '../reveal.js/plugin/notes/notes.js', async: true },
 					{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
-			});
+			})
+			Reveal.configure({
+				keyboard: {
+					39: 'next',	// Nutzer nicht verwirren
+					13: 'next',
+					37: 'prev'
+				}
+			})
+			;
 		</script>
 	</body>
 </html>
